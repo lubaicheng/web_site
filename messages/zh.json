@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "首页",
+    "news": "新闻动态",
+    "teams": "课题组成员",
+    "research": "研究方向",
+    "publications": "发表论文",
+    "contact": "联系我们"
+  },
+  "home": {
+    "readMore": "了解更多",
+    "latestNews": "最新动态"
+  },
+  "teams": {
+    "title": "课题组成员",
+    "supervisor": "导师",
+    "postdoc": "博士后",
+    "staff": "职工",
+    "student": "在校硕博",
+    "alumni": "毕业生"
+  },
+  "news": {
+    "title": "新闻动态",
+    "back": "返回新闻列表"
+  },
+  "publications": {
+    "title": "发表论文"
+  },
+  "research": {
+    "title": "研究方向"
+  },
+  "contact": {
+    "title": "联系我们",
+    "address": "地址",
+    "email": "邮箱",
+    "phone": "电话",
+    "map": "查看地图"
+  },
+  "admin": {
+    "login": "管理员登录",
+    "username": "用户名",
+    "password": "密码",
+    "submit": "登录",
+    "dashboard": "控制台",
+    "logout": "退出登录",
+    "news": "新闻管理",
+    "teams": "人员管理",
+    "publications": "论文管理",
+    "research": "研究方向管理",
+    "carousel": "轮播图管理",
+    "links": "友情链接管理",
+    "settings": "站点配置",
+    "add": "新增",
+    "edit": "编辑",
+    "delete": "删除",
+    "save": "保存",
+    "cancel": "取消",
+    "title": "后台管理系统"
+  }
+}

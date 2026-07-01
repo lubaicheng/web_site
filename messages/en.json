@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "HOME",
+    "news": "NEWS",
+    "teams": "TEAMS",
+    "research": "RESEARCH",
+    "publications": "PUBLICATIONS",
+    "contact": "CONTACT US"
+  },
+  "home": {
+    "readMore": "Read More",
+    "latestNews": "Latest News"
+  },
+  "teams": {
+    "title": "Team Members",
+    "supervisor": "Supervisor",
+    "postdoc": "Postdoc",
+    "staff": "Staff",
+    "student": "Students",
+    "alumni": "Alumni"
+  },
+  "news": {
+    "title": "News",
+    "back": "Back to News"
+  },
+  "publications": {
+    "title": "Publications"
+  },
+  "research": {
+    "title": "Research"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "map": "View on Map"
+  },
+  "admin": {
+    "login": "Admin Login",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Login",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "news": "News",
+    "teams": "Teams",
+    "publications": "Publications",
+    "research": "Research Areas",
+    "carousel": "Carousel",
+    "links": "Friendly Links",
+    "settings": "Site Settings",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "title": "Admin Panel"
+  }
+}

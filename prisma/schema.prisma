@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model News {
+  id          Int      @id @default(autoincrement())
+  titleZh     String   @default("")
+  titleEn     String   @default("")
+  contentZh   String   @default("")
+  contentEn   String   @default("")
+  coverImage  String   @default("")
+  publishedAt DateTime @default(now())
+  slug        String   @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TeamMember {
+  id        Int      @id @default(autoincrement())
+  nameZh    String   @default("")
+  nameEn    String   @default("")
+  titleZh   String   @default("")
+  titleEn   String   @default("")
+  photo     String   @default("")
+  bioZh     String   @default("")
+  bioEn     String   @default("")
+  group     String   @default("supervisor") // supervisor | postdoc | staff | student | alumni
+  order     Int      @default(0)
+  email     String   @default("")
+  office    String   @default("")
+  phone     String   @default("")
+  slug      String   @unique
+  sections  MemberSection[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model MemberSection {
+  id        Int      @id @default(autoincrement())
+  memberId  Int
+  title     String   @default("")
+  content   String   @default("")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  member    TeamMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
+}
+
+model Publication {
+  id        Int      @id @default(autoincrement())
+  title     String   @default("")
+  authors   String   @default("")
+  journal   String   @default("")
+  year      Int      @default(2024)
+  doi       String   @default("")
+  link      String   @default("")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ResearchArea {
+  id           Int      @id @default(autoincrement())
+  titleZh      String   @default("")
+  titleEn      String   @default("")
+  descriptionZh String  @default("")
+  descriptionEn String  @default("")
+  coverImage   String   @default("")
+  order        Int      @default(0)
+  slug         String   @unique
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model CarouselImage {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String   @default("")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model FriendlyLink {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String   @default("")
+  url       String   @default("")
+  name      String   @default("")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteConfig {
+  id                Int    @id @default(autoincrement())
+  copyrightZh       String @default("")
+  copyrightEn       String @default("")
+  addressZh         String @default("")
+  addressEn         String @default("")
+  email             String @default("")
+  phone             String @default("")
+  mapImageUrl       String @default("")
+  mapLink           String @default("")
+  siteNameZh        String @default("")
+  siteNameEn        String @default("Lab")
+  siteLogo          String @default("")
+  homeLeftNewsCount  Int    @default(3)
+  homeRightNewsCount Int   @default(7)
+  carouselInterval   Int   @default(4)
+}
