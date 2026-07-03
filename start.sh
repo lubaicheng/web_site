@@ -27,7 +27,8 @@ fi
 # 初始化数据库
 if [ ! -f dev.db ]; then
     echo "🗄️  初始化数据库..."
-    npx prisma migrate dev --name init 2>/dev/null
+    npx prisma db push 2>/dev/null
+    npx prisma generate 2>/dev/null
     npx prisma db seed 2>/dev/null
     echo "✅ 数据库已就绪"
 fi

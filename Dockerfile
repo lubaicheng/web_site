@@ -8,6 +8,7 @@ RUN npm install --silent
 COPY . .
 
 RUN npx prisma generate
+RUN npx prisma db push 2>/dev/null; npx prisma db seed 2>/dev/null; echo "done"
 
 EXPOSE 3000
 

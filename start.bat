@@ -35,6 +35,7 @@ if not exist dev.db (
     echo DATABASE_URL="file:./dev.db" > .env
     echo 🗄️  正在初始化数据库...
     call npx prisma db push >nul 2>&1
+    call npx prisma generate >nul 2>&1
     call npx prisma db seed >nul 2>&1
 )
 
